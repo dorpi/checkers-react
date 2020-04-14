@@ -1,0 +1,11 @@
+
+export const INIT = 'INIT'
+export const CHANGE_PLAYER = 'CHANGE_PLAYER'
+export const UPDATE_BOARD_CELL = 'UPDATE_BOARD_CELL'
+export const UPDATE_MOVE = 'UPDATE_MOVE'
+export const UPDATE_JUMP ='UPDATE_JUMP'
+export const UPDATE_SCORE = 'UPDATE_SCORE'
+export const UPDATE_MOVES_NUMBER = 'UPDATE_MOVES_NUMBER'
+export const ADD_HISTORY = 'ADD_HISTORY'
+export const HISTORY_MOVE = 'HISTORY_MOVE'
+export const HISTORY_JUMP = 'HISTORY_JUMP'
