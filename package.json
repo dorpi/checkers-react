@@ -1,4 +1,5 @@
 {
+  "homepage": "http://dorpi.github.io/checkers-react",
   "name": "checkers",
   "version": "0.1.0",
   "private": true,
