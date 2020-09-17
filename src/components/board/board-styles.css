@@ -1,51 +1,18 @@
 
 
 
-
-.table-responsive{
-
-  border:10px solid rgba(8, 7, 1, 0.673);
-  border-radius: 4%;
-  background-color: whitesmoke;
-  height: 75vh;
-  width: 40vw;
-  min-width: 400px;
-  min-height: 400px;
-}
+/*Game settings*/
 
 
-.table {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  }
-
-  tr:nth-child(odd) td:nth-child(even),
-  tr:nth-child(even) td:nth-child(odd) {
-    background-color: rgb(145, 145, 145);
-  
-  }
-
-
-td{
-    
-    height:12%;
-    width:12%;
-   
-   
-}
-
-
-  
 .piece{
-    margin-left: 10%;
-    border-radius: 50%;
-    width:80%;
-    height:90%;
-    text-align: center;
-    padding-top: 15%;
-    font-size: 1.0vw;
-    font-weight: 700;
+  border-radius: 100px;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin:auto;
+  
 }
 
 .player1{
@@ -60,15 +27,50 @@ background: black;
 
 }
 .king-player1{
-
 color:whitesmoke;
 background: red;
 box-shadow: 2px 2px grey;
 }
 
 .king-player2{
-
 color:whitesmoke;
 background:black;
 box-shadow: 2px 2px grey;
+}
+
+
+/*Mobile view*/
+.table-responsive{
+  
+  overflow-y: unset;
+  overflow-x:unset
+}
+
+.table-responsive .table{
+  
+  margin:0;
+  width:100%;
+  height:100%;
+}
+
+
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: rgb(145, 145, 145);
+  }
+
+
+/*Desktop view*/
+@media (min-width:700px){
+    
+.table-responsive{
+  width:60%;
+
+  align-self: center;
+}
+
+.piece{
+  width: 40px;;
+  height: 40px;;
+}
 }
