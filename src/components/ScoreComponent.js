@@ -5,11 +5,11 @@ import PropsType from 'prop-types';
 
  const ScoreComponent=({score,moves}) =>{
     return (
-        <div>
+        <div className="scores-display">
              
-              <Badge pill style={{width:'200px'}} variant='danger'> Player1: {score[1]}</Badge>{' '}
-              <Badge pill style={{width:'200px'}} variant="dark">    Player 2: {score[2]}</Badge>{' '}
-              <Badge  style={{width:'100px'}}variant="primary"> Moves: {moves}</Badge>{' '}
+              <Badge pill className="player-score-display" variant='danger'> Player1: {score[1]}</Badge>{' '}
+              <Badge pill className="player-score-display" variant="dark">    Player 2: {score[2]}</Badge>{' '}
+              <Badge pill className="moves-display"variant="primary"> Moves: {moves}</Badge>{' '}
 
        
         </div>
