@@ -3,11 +3,11 @@ import PropsType from 'prop-types';
 import Table from 'react-bootstrap/Table'
 
 
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
+import Button from 'react-bootstrap/Button'
 import Square from './Square ';
 import HistoryButton from '../HistoryButton'
-import StartButton from '../StartButton';
+
 
 import { connect } from 'react-redux';
 
@@ -167,6 +167,8 @@ class CheckersBoard extends Component {
       }
     }
   }
+
+
   onClickStartGame() {
     this.tableRef.current.style.pointerEvents = "";
     if (this.tableRef.current.hidden){
@@ -216,29 +218,30 @@ class CheckersBoard extends Component {
    
 
     return (
-      <div>
-        <Row >
-          <Col >
-            <Table borderless responsive ref={this.tableRef}  >
+      <div className="game-display">
+          <div className="top-part">
+              <h4  style={{ color: currentPlayer === PLAYER1 ? "red" : "black" }}>
+                {this.state.message}
+              </h4>
+            
+            <Table responsive bordered ref={this.tableRef}  >
               <tbody>
                 {tableData}
               </tbody>
             </Table>
-          </Col>
-          <Col >
-            <Row className='justify-content-md-center pb-5'>
-              <h3  style={{ color: currentPlayer === PLAYER1 ? "red" : "black" }}>
-                {this.state.message}
-              </h3>
-            </Row>
-            <Row className='justify-content-md-center pr-3'>
-              <StartButton onClick={this.onClickStartGame} />
-              </Row>
-              <Row  className='justify-content-md-center'> 
-                <HistoryButton undoClick={this.undoClick} nextClick={this.nextClick} />
-            </Row>
-          </Col>
-        </Row>
+         
+            </div>
+            <Button 
+              variant="primary"
+              size="lg"
+              onClick={()=>
+                this.onClickStartGame()}
+            >
+Start Game
+</Button>
+
+            <HistoryButton undoClick={this.undoClick} nextClick={this.nextClick} />
+            
       </div>
     )
   }
